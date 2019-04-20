@@ -23,6 +23,7 @@ var connection = mysql.createConnection({
 });
 
 //handles different paths and serves the specific related files
+app.use(express.static(path.join(__dirname , "../")))
 
 // changing + tp , goes up one directory
 app.get("/", function (req, res) {
