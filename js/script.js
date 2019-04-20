@@ -7,6 +7,7 @@ let name = null;
 let phoneNumber = null;
 let email = null;
 let uniqueId = null;
+let reservations = [];
 
 var connection = mysql.createConnection({
   host: "localhost",
@@ -24,14 +25,15 @@ var connection = mysql.createConnection({
 
 //handles different paths and serves the specific related files
 
-// changing + tp , goes up one directory
+// changing + to , goes up one directory
 app.get("/", function (req, res) {
   console.log(__dirname);
   res.sendFile(path.join(__dirname, "../index.html"));
 })
 
 app.get("/tables", function (req, res) {
-  res.sendFile(path.join(__dirname + "/tables.html"))
+  console.log(__dirname);
+  res.sendFile(path.join(__dirname, "../tables.html"));
 })
 
 //starts the server and listens for responses
@@ -46,7 +48,7 @@ function showTables() {
   });
 
   for (i = 0; i < res.length; i++) {
-    data.push([res[i].name, res[i].phone_numberumber, res[i].email, '$' + res[i].price, res[i].stock_quantity]);
+    reservations.push([res[i].unique_id, res[i].name, res[i].phone_number, res[i].email, res[i].email]);
   }
 
 }
@@ -61,6 +63,7 @@ function addReservation() {
     if (err) throw err;
     console.log(res);
   });
+  let reservations = [];
 
   console.log(name);
   console.log(phoneNumber);
