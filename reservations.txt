@@ -1,0 +1,3 @@
+CREATE DATABASE hot_resturaunt 
+USE hot_resturaunt
+CREATE TABLE hot_resturaunt(name,phone_number,Email,Unique_id)
