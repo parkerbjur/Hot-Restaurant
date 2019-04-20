@@ -1,0 +1,27 @@
+{
+  "name": "Hot-Restaurant",
+  "version": "1.0.0",
+  "description": "something new",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql": "^2.17.1",
+    "path": "^0.12.7",
+    "table": "^5.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyof45/Hot-Restaurant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyof45/Hot-Restaurant/issues"
+  },
+  "homepage": "https://github.com/tyof45/Hot-Restaurant#readme"
+}
