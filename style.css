@@ -1,0 +1,22 @@
+
+.jumbotron {
+    background: #F2D43D;
+}
+
+.jumbotron>hr {
+    border-top-color: black;
+}
+
+#cornIcon {
+    max-height: 63px;
+}
+
+button {
+    background: #F27405 !important;
+    border-color: #F27405 !important;
+}
+
+.label {
+    background: #F27405 !important;
+    border-color:  #F27405 !important;
+}
