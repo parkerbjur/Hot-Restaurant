@@ -23,16 +23,20 @@ var connection = mysql.createConnection({
 });
 
 //handles different paths and serves the specific related files
-app.use(express.static(path.join(__dirname , "../")))
+app.use(express.static(path.join(__dirname, "../")))
 
 // changing + tp , goes up one directory
 app.get("/", function (req, res) {
   console.log(__dirname);
-  res.sendFile(path.join(__dirname, "../index.html"));
+  res.sendFile(path.join(__dirname, "index.html"));
 })
 
 app.get("/tables", function (req, res) {
-  res.sendFile(path.join(__dirname + "../tables.html"))
+  res.sendFile(path.join(__dirname, "../tables.html"))
+})
+
+app.get("/reserve", function(req, res) {
+  res.sendFile(path.join(__dirname, "../reserve.html"))
 })
 
 //starts the server and listens for responses
